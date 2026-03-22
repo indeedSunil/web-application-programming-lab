@@ -105,6 +105,8 @@ You can start **both** the backend Python API and frontend React server simultan
 .\start.bat
 ```
 
+>The file is located inside the crud-django-react folder.
+
 > The React dev server automatically opens at `http://localhost:5173` and talks to the Django API at port `8000`.
 
 ---
