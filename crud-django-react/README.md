@@ -3,7 +3,7 @@
 A clean, minimal task manager demonstrating full **Create · Read · Update · Delete** operations across a decoupled full-stack architecture.
 
 **Backend** → Django REST Framework · SQLite  
-**Frontend** → React 18 (CDN, no build step needed)
+**Frontend** → React 19 + Vite (Modern SPA)
 
 ---
 
@@ -59,8 +59,15 @@ crud-django-react/
 │       ├── urls.py              # DRF DefaultRouter
 │       └── admin.py             # Admin panel config
 │
-├── frontend/
-│   └── index.html               # React 18 via CDN — open directly in browser
+├── frontend/                      # React SPA
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   └── src/
+│       ├── main.jsx             # React entry point
+│       ├── App.jsx              # Main UI Components
+│       ├── api.js               # API Layer
+│       └── index.css            # Styles & Tokens
 │
 ├── docs/                        # README screenshots
 └── README.md
@@ -76,8 +83,8 @@ crud-django-react/
 | REST API | Django REST Framework 3.14 |
 | CORS | django-cors-headers |
 | Database | SQLite (file-based, zero config) |
-| Frontend | React 18 (via unpkg CDN) |
-| JSX transpiler | Babel Standalone (CDN) |
+| Frontend | React 19 (via Vite) |
+| Dev Server | Vite |
 | Fonts | Inter — Google Fonts |
 
 ---
@@ -86,13 +93,25 @@ crud-django-react/
 
 ### Prerequisites
 - Python 3.10+ installed
-- A browser (Chrome, Edge, Firefox)
-- No Node.js required
+- Node.js 18+ installed
 
 ---
 
-### Step 1 — Install dependencies
+### Running the Project
 
+You can start **both** the backend Python API and frontend React server simultaneously with:
+
+```powershell
+.\start.bat
+```
+
+> The React dev server automatically opens at `http://localhost:5173` and talks to the Django API at port `8000`.
+
+---
+
+### Manual Setup (Without start.bat)
+
+#### Start Backend
 Open a terminal in the `backend/` folder:
 
 ```powershell
@@ -128,11 +147,17 @@ The API is now live at **`http://127.0.0.1:8000`**
 
 ---
 
-### Step 4 — Open the frontend
+#### Start Frontend
 
-Double-click `frontend/index.html` to open it in your browser, or drag it into a browser tab.
+Open a new terminal in the `frontend/` folder:
 
-> The React app automatically connects to the Django API on port 8000.
+```powershell
+cd "crud-django-react\frontend"
+npm install
+npm run dev
+```
+
+> The React dev server automatically opens at `http://localhost:5173`.
 
 ---
 
