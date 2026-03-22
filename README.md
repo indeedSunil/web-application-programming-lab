@@ -10,31 +10,31 @@ A clean, minimal task manager demonstrating full **Create · Read · Update · D
 ## Screenshots
 
 ### Full Application Overview
-![App Overview](crud/django-react/docs/ss_1_overview.png)
+![App Overview](crud-django-react/docs/ss_1_overview.png)
 *Header, live stats bar (Total / Pending / Completed), Add Task form with priority selector, search and filter tabs, and the task list — all in a strict black & white editorial design.*
 
 ---
 
 ### Task List
-![Task List](crud/django-react/docs/ss_2_tasklist.png)
+![Task List](crud-django-react/docs/ss_2_tasklist.png)
 *Tasks displayed in a unified bordered list. Each row shows title, description, outlined priority badge, and date. Left border thickness indicates priority level (bold white = high, mid gray = medium, faint = low). Edit ✏️ and delete 🗑️ actions on hover.*
 
 ---
 
 ### Inline Edit Mode
-![Inline Edit](crud/django-react/docs/ss_3_edit.png)
+![Inline Edit](crud-django-react/docs/ss_3_edit.png)
 *Clicking the edit icon opens the edit form directly inside the card — no page navigation. Title, priority, and description are all editable in-place with Save / Cancel controls.*
 
 ---
 
 ### Completed Tasks
-![Completed Tasks](crud/django-react/docs/ss_4_completed.png)
+![Completed Tasks](crud-django-react/docs/ss_4_completed.png)
 *Checked tasks are struck through and dimmed. The white checkbox fills solid on completion. Stats update in real time. Use the "Completed" filter tab to view only finished tasks.*
 
 ---
 
 ### REST API — Django REST Framework
-![REST API](crud/django-react/docs/ss_5_api.png)
+![REST API](crud-django-react/docs/ss_5_api.png)
 *The DRF Browsable API at `http://127.0.0.1:8000/api/tasks/` — all endpoints documented inline with live JSON responses, HTTP method badges, and filter/search controls.*
 
 ---
